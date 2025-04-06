@@ -10,6 +10,7 @@ from src.router import user_router
 
 async def start():
     dp.include_router(user_router)
+    print("супев фича")
     try:
         await bot(DeleteWebhook(drop_pending_updates=True))
         await dp.start_polling(bot)
